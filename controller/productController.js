@@ -1,5 +1,5 @@
 var express = require('express');
-var Product = require('../model/product');
+var Product = require('../model/productModel');
 var router = express.Router();
 
 /* Product Listeleme Islemi Burada Yapilacak. */
