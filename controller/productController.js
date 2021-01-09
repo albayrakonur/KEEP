@@ -41,4 +41,14 @@ router.post("/", function (req, res, next) {
 
 /* Product Silme Islemi Burada Yapilacak. */
 
+router.delete('/:id', function (req, res, next) {
+    Product.findByIdAndRemove({barcode: req.params.id}).then((product) => {
+        console.log(product)
+        res.send(200)
+    }).catch((err) => {
+        res.json(err);
+    });
+
+});
+
 module.exports = router;
